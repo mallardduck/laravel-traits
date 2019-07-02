@@ -47,6 +47,9 @@ $schedule->command('maps:find -C')
          ->hourly()
          ->appendOutputTo($cronLog);
  ```
+*Note*: Setting it up like this would log the cron to `storage/logs/cron.log` in youre Laravel app. It would not log, nor include prefix, one-off executions of the command.
+
+Read more about Laravel's Scheduled Tasks here: [Task Scheduling](https://laravel.com/docs/5.8/scheduling)
 
 ## Example output:
 Depending on prefix string you setup the output will vary. However in general, the prefix will include the string you set and an 'ID' corresponding to the UNIX timestamp.
