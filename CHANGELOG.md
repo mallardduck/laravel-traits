@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add Eloquent `CollectionPaginator` trait.
 - Docs for the `CollectionPaginator` trait.
 
+## Changed
+- Added Illuminate requirements for `CollectionPaginator`
+
 ## [0.0.3] - 2019-07-02
 ### Added
 - Set the laravel component requirements.

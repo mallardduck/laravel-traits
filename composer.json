@@ -27,6 +27,8 @@
     "require": {
       "php": "^7.1",
       "illuminate/console": "~5.4",
+      "illuminate/database": "~5.4",
+      "illuminate/pagination": "~5.4",
       "illuminate/view": "~5.4"
     }
 }
