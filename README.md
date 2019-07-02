@@ -10,3 +10,8 @@ Each of the traits will have slightly different directions for usage. For best r
 ### Trait docs
 * [How to use CommandOutputPrefix](docs/01-CommandOutputPrefix.md)
 * [How to use ControllerManagesSections](docs/02-ControllerManagesSections.md)
+
+## TODO
+- Figure out what version of Laravel this requires  
+Essentially I know it works with Laravel 5+, but not what minimum version it requires.
+- Add tests...nuff said.
