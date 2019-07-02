@@ -23,6 +23,14 @@ trait ControllerManagesSections
        */
     private $orgBladeSections = [];
 
+    /**
+     * Boots the trait and sets the constructor defined section data.
+     */
+    public function bootManagesSections()
+    {
+      $this->setControllerSections();
+    }
+
       /**
        * Helper method to loop thru the controller set Blade sections.
        */
