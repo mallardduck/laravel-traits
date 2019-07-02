@@ -25,6 +25,8 @@
         }
     },
     "require": {
-      "php": "^7.1"
+      "php": "^7.1",
+      "illuminate/console": "~5.4.0",
+      "illuminate/view": "~5.4.0"
     }
 }

@@ -12,6 +12,5 @@ Each of the traits will have slightly different directions for usage. For best r
 * [How to use ControllerManagesSections](docs/02-ControllerManagesSections.md)
 
 ## TODO
-- Figure out what version of Laravel this requires  
-Essentially I know it works with Laravel 5+, but not what minimum version it requires.
 - Add tests...nuff said.
+- Add more traits as I build them, or if others submit some!
