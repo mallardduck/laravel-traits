@@ -10,6 +10,7 @@ Each of the traits will have slightly different directions for usage. For best r
 ### Trait docs
 * [How to use CommandOutputPrefix](docs/01-CommandOutputPrefix.md)
 * [How to use ControllerManagesSections](docs/02-ControllerManagesSections.md)
+* [How to use CollectionPaginator](docs/03-CollectionPaginator.md)
 
 ## TODO
 - Add tests...nuff said.
