@@ -32,7 +32,7 @@ $this->bootManagesSections();
 
 ## Requirements
 * Laravel 5+
-* Using the `Illuminate\Contracts\View\Factory` directly, instead of facades or magic methods
+* Using the `Illuminate\Contracts\View\Factory` directly, instead of facades or magic methods  
 Specifically, you should inject this in the constrctor and set it to `$this->viewFactory`.
 
 ## How to use:
