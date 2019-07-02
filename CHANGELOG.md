@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Docs for the `CommandOutputPrefix` trait.
+- Docs for the `ControllerManagesSections` trait.
+- Create a `bootManagesSections` method.
 
 ## [0.0.1] - 2019-07-02
 ### Added
