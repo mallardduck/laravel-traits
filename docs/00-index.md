@@ -1,3 +1,4 @@
 # Docs Index
 
-* [How to use CommandOutputPrefix](docs/01-CommandOutputPrefix.md)
+* [How to use CommandOutputPrefix](./01-CommandOutputPrefix.md)
+* [How to use ControllerManagesSections](./02-ControllerManagesSections.md)
