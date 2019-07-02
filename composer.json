@@ -1,0 +1,30 @@
+{
+    "name": "mallardduck/laravel-traits",
+    "description": "A collection of useful Laravel snippets in the form of easy to use traits.",
+    "keywords": [
+        "laravel",
+        "laravel traits",
+        "traits",
+        "console",
+        "controller"
+    ],
+    "type": "library",
+    "homepage": "https://github.com/mallardduck/laravel-traits",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Dan Pock",
+            "email": "self@danpock.me",
+            "homepage": "https://danpock.me",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MallardDuck\\LaravelTraits\\": "src/"
+        }
+    },
+    "require": {
+      "php": "^7.1"
+    }
+}
