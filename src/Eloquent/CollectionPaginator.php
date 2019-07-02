@@ -14,7 +14,7 @@ trait CollectionPaginator {
   /**
    * Boots the trait to setup the pagination macros.
    */
-  public function bootPaginateAnyCollection()
+  public function bootCollectionPaginator()
   {
     Collection::macro('paginate', function ($perPage = 5, $pageName = 'page', $page = null) {
         $total = $this->count();
