@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.0] - 2019-07-11
+### Fixed
+- Bug with `ControllerManagesSections` trait sections not overwriting.
+- OCD issue with initial versions not actualy matching SemVer.
+- Code style consistency - ran PHPCBF with PSR12.
+
 ## [0.0.4] - 2019-07-02
 ### Added
 - Add Eloquent `CollectionPaginator` trait.
