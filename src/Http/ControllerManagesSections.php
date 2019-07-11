@@ -8,19 +8,19 @@ namespace MallardDuck\LaravelTraits\Http;
 trait ControllerManagesSections
 {
 
-      /**
-       * @var array
-       */
+    /**
+     * @var array
+     */
     protected $bladeSections = [];
 
-      /**
-       * @var bool
-       */
+    /**
+     * @var bool
+     */
     private $sectionsProcessed = false;
 
-      /**
-       * @var array
-       */
+    /**
+     * @var array
+     */
     private $orgBladeSections = [];
 
     /**
@@ -28,21 +28,20 @@ trait ControllerManagesSections
      */
     public function bootManagesSections()
     {
-      $this->setControllerSections();
+        $this->setControllerSections();
     }
 
-      /**
-       * Helper method to loop thru the controller set Blade sections.
-       */
+    /**
+     * Helper method to loop thru the controller set Blade sections.
+     */
     public function setControllerSections()
     {
         foreach ($this->bladeSections as $name => $section) {
             if (true === $this->sectionsProcessed && $this->sectionDataDiffers($name)) {
                 $this->viewFactory->startSection($name, null);
                 echo $section;
-            } elseif (
-              false === $this->sectionsProcessed ||
                 $this->viewFactory->stopSection(true); // pass true to overwrite prior section content
+            } elseif (false === $this->sectionsProcessed ||
               (true === $this->sectionsProcessed && !$this->sectionDataDiffers($name))
             ) {
                 $this->viewFactory->startSection($name, $section);
@@ -55,10 +54,10 @@ trait ControllerManagesSections
         }
     }
 
-      /**
-       * @param  string $sectionName
-       * @return bool
-       */
+    /**
+     * @param  string $sectionName
+     * @return bool
+     */
     private function sectionDataDiffers(string $sectionName): bool
     {
         if (false === isset($this->orgBladeSections[$sectionName])) {
