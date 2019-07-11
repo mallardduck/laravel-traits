@@ -40,9 +40,9 @@ trait ControllerManagesSections
             if (true === $this->sectionsProcessed && $this->sectionDataDiffers($name)) {
                 $this->viewFactory->startSection($name, null);
                 echo $section;
-                $this->viewFactory->stopSection();
             } elseif (
               false === $this->sectionsProcessed ||
+                $this->viewFactory->stopSection(true); // pass true to overwrite prior section content
               (true === $this->sectionsProcessed && !$this->sectionDataDiffers($name))
             ) {
                 $this->viewFactory->startSection($name, $section);
