@@ -22,7 +22,7 @@ use CollectionPaginator;
 
 Now, within the `boot()` method add:
 ```php
-$this->bootPaginateAnyCollection();
+$this->bootCollectionPaginator();
 ```
 
 And that's it!
