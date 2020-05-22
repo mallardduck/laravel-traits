@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.2] - 2020-05-22
+- Bump composer to support Laravel 7.x
+- Bump minimum Laravel 5 version to 5.5 from 5.4
+
 ## [0.1.1] - 2020-04-21
 - Bump composer to support Laravel 6.x
 
