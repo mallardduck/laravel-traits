@@ -25,10 +25,10 @@
         }
     },
     "require": {
-      "php": "^7.1",
-      "illuminate/console": "~5.5|~6.0|~7.0|~8.0",
-      "illuminate/database": "~5.5|~6.0|~7.0|~8.0",
-      "illuminate/pagination": "~5.5|~6.0|~7.0|~8.0",
-      "illuminate/view": "~5.5|~6.0|~7.0|~8.0"
+      "php": "^7.2",
+      "illuminate/console": "~6.0|~7.0|~8.0",
+      "illuminate/database": "~6.0|~7.0|~8.0",
+      "illuminate/pagination": "~6.0|~7.0|~8.0",
+      "illuminate/view": "~6.0|~7.0|~8.0"
     }
 }

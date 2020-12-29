@@ -7,11 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.2.0] - 2020-12-29
+### Changed
+- Bump Laravel version to drop 5.5 and add 8.0.
+- Bump PHP version to 7.2
+
 ## [0.1.2] - 2020-05-22
+### Changed
 - Bump composer to support Laravel 7.x
 - Bump minimum Laravel 5 version to 5.5 from 5.4
 
 ## [0.1.1] - 2020-04-21
+### Changed
 - Bump composer to support Laravel 6.x
 
 ## [0.1.0] - 2019-07-11
@@ -25,7 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add Eloquent `CollectionPaginator` trait.
 - Docs for the `CollectionPaginator` trait.
 
-## Changed
+### Changed
 - Added Illuminate requirements for `CollectionPaginator`.
 - Renamed `CollectionPaginator`'s `bootPaginateAnyCollection` to `bootCollectionPaginator`.
 
