@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.2.1] - 2021-01-30
+### Added
+- Support for Managing blade sections in Blade Components.
+- Common trait for shared functionality.
+
+### Changed
+- How ControllerManagesSections checks for updated sections.
+
 ## [0.2.0] - 2020-12-29
 ### Changed
 - Bump Laravel version to drop 5.5 and add 8.0.

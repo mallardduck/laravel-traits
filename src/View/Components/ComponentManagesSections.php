@@ -1,24 +1,24 @@
 <?php
 
-namespace MallardDuck\LaravelTraits\Http;
+namespace MallardDuck\LaravelTraits\View\Components;
 
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\Concerns\ManagesLayouts;
 use MallardDuck\LaravelTraits\Generic\ManagesLayoutSections;
 
 /**
- * Adds Blade section management to controllers.
+ * Adds Blade section management to components.
  *
  * @property Factory|ManagesLayouts $viewFactory
  */
-trait ControllerManagesSections
+trait ComponentManagesSections
 {
     use ManagesLayoutSections;
 
     /**
      * @var array
      */
-    protected $bladeSections = [];
+    protected $componentSections = [];
 
     /**
      * @var bool
@@ -28,30 +28,30 @@ trait ControllerManagesSections
     /**
      * @var array
      */
-    private $orgBladeSections = [];
+    private $originalSections = [];
 
     /**
      * Boots the trait and sets the constructor defined section data.
      */
-    public function bootManagesSections()
+    public function bootComponentManagesSections()
     {
-        $this->setControllerSections();
+        $this->setComponentSections();
     }
 
     /**
      * Helper method to loop thru the controller set Blade sections.
      */
-    public function setControllerSections()
+    public function setComponentSections()
     {
-        foreach ($this->bladeSections as $name => $section) {
+        foreach ($this->componentSections as $name => $section) {
             if (true === $this->sectionsProcessed &&
-                $this->sectionDataDiffers($this->orgBladeSections, $this->bladeSections, $name)
+                $this->sectionDataDiffers($this->originalSections, $this->componentSections, $name)
             ) {
                 $this->overwriteSectionData($name, $section);
             } elseif (false === $this->sectionsProcessed ||
               (
                   true === $this->sectionsProcessed &&
-                  !$this->sectionDataDiffers($this->orgBladeSections, $this->bladeSections, $name)
+                  !$this->sectionDataDiffers($this->originalSections, $this->componentSections, $name)
               )
             ) {
                 $this->pushSectionData($name, $section);
@@ -60,7 +60,7 @@ trait ControllerManagesSections
 
         // On the first run thru, mark things as processed & keep a copy of OG data.
         if (false === $this->sectionsProcessed) {
-            $this->orgBladeSections = $this->bladeSections;
+            $this->originalSections = $this->componentSections;
             $this->sectionsProcessed = true;
         }
     }

@@ -2,8 +2,14 @@
 
 namespace MallardDuck\LaravelTraits\Console;
 
+use Illuminate\Console\Concerns\InteractsWithIO;
+use Illuminate\Console\OutputStyle;
+
 /**
  * Easily add the ability to prefix command output for convenient logging.
+ *
+ * @property string $signature
+ * @mixin InteractsWithIO
  */
 trait CommandOutputPrefix
 {
@@ -48,7 +54,7 @@ trait CommandOutputPrefix
     }
 
   /**
-   * Initilizes output prefixing when a command is envoked.
+   * Initializes output prefixing when a command is invoked.
    *
    * To be called within the handle() method on the command.
    *
@@ -69,15 +75,16 @@ trait CommandOutputPrefix
         return "[{$this->outputPrefix} ID:{$this->runStart}] ";
     }
 
-  /**
-   * Returns the needed output string - with or without the prefix.
-   *
-   * @param  string  $string
-   * @return string
-   */
-    private function renderOutputString($string): string
+    /**
+     * Returns the needed output string - with or without the prefix.
+     *
+     * @param string $string
+     *
+     * @return string
+     */
+    private function renderOutputString(string $string): string
     {
-        if (true == $this->prefixConfig) {
+        if (true === $this->prefixConfig) {
             return $this->getOutputPrefix() . $string;
         }
         return $string;
