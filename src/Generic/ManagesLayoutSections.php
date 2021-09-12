@@ -10,10 +10,18 @@ use Illuminate\View\Concerns\ManagesLayouts;
  *
  * @package MallardDuck\LaravelTraits\Generic
  *
- * @property Factory|ManagesLayouts $viewFactory
+ * @property null|Factory&ManagesLayouts $viewFactory
  */
 trait ManagesLayoutSections
 {
+    /**
+     * @return Factory&ManagesLayouts
+     */
+    public function getViewFactory(): Factory
+    {
+        return $this->viewFactory ?? app('view');
+    }
+
     /**
      * @param array  $original
      * @param array  $current
@@ -31,13 +39,13 @@ trait ManagesLayoutSections
 
     private function pushSectionData($name, $section)
     {
-        $this->viewFactory->startSection($name, $section);
+        $this->getViewFactory()->startSection($name, $section);
     }
 
     private function overwriteSectionData($name, $section)
     {
-        $this->viewFactory->startSection($name, null);
+        $this->getViewFactory()->startSection($name, null);
         echo $section;
-        $this->viewFactory->stopSection(true); // pass true to overwrite prior section content
+        $this->getViewFactory()->stopSection(true); // pass true to overwrite prior section content
     }
 }
