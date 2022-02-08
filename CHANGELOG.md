@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.1] - 2022-02-08
+### Added
+- Support for Laravel 9
+
 ## [0.3.0] - 2021-12-27
 ### Changed
 - Refactored ManagedLayoutSections trait
