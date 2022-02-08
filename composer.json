@@ -1,6 +1,8 @@
 {
     "name": "mallardduck/laravel-traits",
     "description": "A collection of useful Laravel snippets in the form of easy to use traits.",
+    "license": "GPL-3.0-or-later",
+    "type": "library",
     "keywords": [
         "laravel",
         "laravel traits",
@@ -8,9 +10,6 @@
         "console",
         "controller"
     ],
-    "type": "library",
-    "homepage": "https://github.com/mallardduck/laravel-traits",
-    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Dan Pock",
@@ -19,16 +18,29 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://github.com/mallardduck/laravel-traits",
+    "require": {
+        "php": "^7.2 || ^8.0.0",
+        "illuminate/console": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/database": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/pagination": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/view": "^6.0 || ^7.0 || ^8.0 || ^9.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
     "autoload": {
         "psr-4": {
             "MallardDuck\\LaravelTraits\\": "src/"
         }
     },
-    "require": {
-      "php": "^7.2|^8.0.0",
-      "illuminate/console": "~6.0|~7.0|~8.0",
-      "illuminate/database": "~6.0|~7.0|~8.0",
-      "illuminate/pagination": "~6.0|~7.0|~8.0",
-      "illuminate/view": "~6.0|~7.0|~8.0"
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spatie\\LaravelMarkdown\\MarkdownServiceProvider"
+            ]
+        }
     }
 }

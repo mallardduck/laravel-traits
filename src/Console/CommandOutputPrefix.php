@@ -3,7 +3,6 @@
 namespace MallardDuck\LaravelTraits\Console;
 
 use Illuminate\Console\Concerns\InteractsWithIO;
-use Illuminate\Console\OutputStyle;
 
 /**
  * Easily add the ability to prefix command output for convenient logging.
