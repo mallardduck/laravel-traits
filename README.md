@@ -1,6 +1,10 @@
 # laravel-traits
 A collection of useful Laravel snippets in the form of easy to use traits.
 
+## A message to Russian 🇷🇺 people
+
+If you currently live in Russia, please read [this message](./ToRussianPeople.md).
+
 ## How to use?
 Each of the traits will have slightly different directions for usage. For best results review the traits code and corresponding docs (if they exist). In general, you'll need to do the following:
 * Require this package via Composer.
